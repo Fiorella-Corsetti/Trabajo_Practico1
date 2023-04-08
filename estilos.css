@@ -1,14 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
 nav {
     position: static;
-    top: 0px;
-    left: 0px;
     padding-top: 10px;
-    border: 10px red;
+    border: 10px;
     margin: 25px;
-    background-color: rgb(35, 45, 192);
-    display: inline-block;
+    background-color: #BFD8D2;
+    text-align: center;
 
 }
+
 .anav {
     text-decoration: none;
     background-color: rgba(117, 146, 111, 0.704);
@@ -21,12 +27,13 @@ nav {
     display: inline-block;
 
 }
+
 a:link {
     color: rgb(0, 255, 115);
 }
 
-a:hover {
-    background-color: rgb(10, 55, 114);
+.anav:hover {
+    outline: 2px solid #DE744C;
 }
 
 a:visited {
@@ -37,7 +44,8 @@ a:active {
     background-color: yellow;
     color: rgb(219, 115, 11);
 }
-p::selection{
+
+p::selection {
     background-color: coral
 }
 
@@ -47,6 +55,20 @@ p {
     margin: 50px;
     font-size: 20px;
 }
-.redsocial{
+
+.redsocial {
     width: 20px;
+}
+
+#nombre_empresa {
+    padding: 2px;
+    margin: 2px;
+    color: #DE744C;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    vertical-align: middle;
+    text-shadow: 3px 2px 4px rgba(117, 146, 111, 0.704);
+    letter-spacing: 5px;
+    background-color: black;
 }
