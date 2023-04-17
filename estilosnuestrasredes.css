@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;800&family=Poppins:wght@400;600;700;900&display=swap');
 
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after{
+    margin:0%;
+    padding: 0%;
+    box-sizing: inherit;
 }
 
 body{
@@ -19,7 +21,7 @@ body{
 }
 .header{
 
-    
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -32,7 +34,6 @@ body{
 }
 
 .logo{
-    width: 70px;
     font-size: 25px;
     text-transform: uppercase;
     color: #fff;
@@ -158,27 +159,4 @@ background-color:#0099FF;
     #toggle:checked ~ .navigation{
         display: block;
     }
-}
-
-.slider-wrapper{
-    position: relative;
-max-width: 100%;
-margin: 0 auto;
-}
-
-.slider{
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
-
-}
-
-.slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
 }
