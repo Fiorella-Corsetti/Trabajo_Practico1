@@ -14,7 +14,7 @@ body{
     height: 100%;
     letter-spacing: 0.03em;
     line-height: 1.6;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'open sans';
     min-height: 10vh;
     box-sizing: border-box;
 
@@ -161,7 +161,7 @@ background-color:#0099FF;
     }
 }
 
-h1{
+.images{
     font-size: 10px;
     text-align: center;
     font-size: 48px;
@@ -169,6 +169,16 @@ h1{
     margin-top: 100px;
  
     
+}
+
+.titulo {
+    margin:auto;
+    padding: auto;
+    display:block;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: rgb(0, 229, 255) 1px 0 10px;
 }
 
 .container{

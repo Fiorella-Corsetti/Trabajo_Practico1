@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="paquetes.css">
-    <title>Viajá ya!</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contactanos</title>
 </head>
+
 <body>
     <header class="header">
         <h1 class="titulo">
@@ -34,7 +36,32 @@
             </ul>
         </nav>
     </header>
-    
+
+    <h1>Completá el formulario y dejanos tu consulta</h1><br><br>
+    <form class="formulario" action="./show-data.html">
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="DNI">DNI</label>
+        <input type="number" name="DNI" id="DNI"><br>
+        <label for="fecnac">Fecha de nacimiento</label>
+        <input type="date" name="fecnac" id="fecnac"><br>
+        <label for="pais">Pais de origen</label>
+        <input value="Argentina" type="text" name="pais" id="pais"><br><br>
+        <!-- el value puede dejar precargado un valor-->
+        <h4>marcá tu sucursal</h4>
+        <form action="/action_page.php">
+            <input type="checkbox" id="sucursal1" name="sucursal1" value="Bike">
+            <label for="sucursal1"> Buenos Aires</label><br>
+            <input type="checkbox" id="sucursal2" name="sucursal2" value="Car">
+            <label for="sucursal2"> Córdoba</label><br>
+            <input type="checkbox" id="sucursal3" name="sucursal3" value="Boat">
+            <label for="sucursal3"> Rosario</label><br><br>
+        </form>
+        <label for="comentarios">comentarios</label><br>
+        <textarea placeholder="ingrese su comentario o consulta" name="comentarios" id="comentarios" cols="30"
+            rows="10"></textarea> <br>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 <footer class="footer-distributed">
 
