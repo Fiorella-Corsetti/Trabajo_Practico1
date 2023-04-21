@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Contactanos</title>
+    <link rel="stylesheet" href="./estilosobrenosotros.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Contáctanos</title>
 </head>
 
 <body>
     <header class="header">
-        <h1 class="titulo">
-            Viajá ya!
-        </h1><br> 
         <div class="logo">
             <img src="/visa.png" alt="logo" width="70px">
         </div>
+        <h1 class="titulo">
+            Viajá ya!
+        </h1><br>
+
         <input type="checkbox" id="toggle">
         <label for="toggle"> <img class="menu" src="/menu-bar.png" width="30px" alt="menu">
         </label>
@@ -36,96 +38,107 @@
             </ul>
         </nav>
     </header>
-
-    <h1>Completá el formulario y dejanos tu consulta</h1><br><br>
-    <form class="formulario" action="./show-data.html">
-        <label for="nombre">Nombre y apellido</label>
-        <input type="text" name="nombre" id="nombre"><br>
-        <label for="DNI">DNI</label>
-        <input type="number" name="DNI" id="DNI"><br>
-        <label for="fecnac">Fecha de nacimiento</label>
-        <input type="date" name="fecnac" id="fecnac"><br>
-        <label for="pais">Pais de origen</label>
-        <input value="Argentina" type="text" name="pais" id="pais"><br><br>
-        <!-- el value puede dejar precargado un valor-->
-        <h4>marcá tu sucursal</h4>
-        <form action="/action_page.php">
-            <input type="checkbox" id="sucursal1" name="sucursal1" value="Bike">
-            <label for="sucursal1"> Buenos Aires</label><br>
-            <input type="checkbox" id="sucursal2" name="sucursal2" value="Car">
-            <label for="sucursal2"> Córdoba</label><br>
-            <input type="checkbox" id="sucursal3" name="sucursal3" value="Boat">
-            <label for="sucursal3"> Rosario</label><br><br>
-        </form>
-        <label for="comentarios">comentarios</label><br>
-        <textarea placeholder="ingrese su comentario o consulta" name="comentarios" id="comentarios" cols="30"
+    <div class="container_formulario">
+        <h1 class="titulo_formulario">Completá el formulario y dejanos tu consulta</h1><br><br>
+        <form class="formulario" action="./show-data.html">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="DNI">DNI</label>
+            <input type="number" name="DNI" id="DNI"><br>
+            <label for="fecnac">Fecha de nacimiento</label>
+            <input type="date" name="fecnac" id="fecnac"><br>
+            <label for="pais">Pais de origen</label>
+            <input value="Argentina" type="text" name="pais" id="pais"><br><br>
+            <!-- el value puede dejar precargado un valor-->
+            <h4>Marcá tu sucursal</h4>
+            <form action="/action_page.php">
+                <input type="checkbox" id="sucursal1" name="sucursal1" value="Bike">
+                <label for="sucursal1"> Dot Baires Shopping</label><br>
+                <input type="checkbox" id="sucursal2" name="sucursal2" value="Car">
+                <label for="sucursal2"> Abasto Shopping</label><br>
+            </form>
+            <div class="comentario_formulario">
+                <label for="comentarios">Comentarios</label><br>
+                <textarea placeholder="Ingrese su comentario o consulta" name="comentarios" id="comentarios" cols="30"
+                    rows="10"></textarea> <br>
+                <input type="submit" value="Enviar">
+            </div>
+            <!-- <label for="comentarios">Comentarios</label><br>
+        <textarea placeholder="Ingrese su comentario o consulta" name="comentarios" id="comentarios" cols="30"
             rows="10"></textarea> <br>
-        <input type="submit" value="Enviar">
-    </form>
-</body>
-<footer class="footer-distributed">
-
-    <div class="footer-left">
+        <input type="submit" value="Enviar"> -->
+        </form>
+    </div>
 
 
-        <div class="logo">
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <!-- <div class="logo">
             <img src="/visa.png" alt="logo" width="70px">
 
+        </div> -->
+
+            <p class="footer-links">
+                <a href="index.html" class="link-1">Inicio</a>
+
+                <a href="destinos.html">Destinos</a>
+
+                <a href="sobrenosotros.html">Sobre Nosotros</a>
+
+                <a href="Sucursales.html">Sucursales</a>
+
+                <a href="Contactanos.html">Contactanos</a>
+
+                <a href="paquetes.html">Paquetes</a>
+            </p>
+
+            <!-- <p class="footer-company-name">Viajá ya Company © 2023</p> -->
         </div>
 
-        <p class="footer-links">
-            <a href="index.html" class="link-1">Inicio</a>
+        <div class="footer-center">
 
-            <a href="destinos.html">Destinos</a>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Vedia 3600</span> CABA, Argentina</p>
+            </div>
 
-            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1.555.555.5555</p>
+            </div>
 
-            <a href="Sucursales.html">Sucursales</a>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@viajaya.com">support@viajaya.com</a></p>
+            </div>
 
-            <a href="Contactanos.html">Contactanos</a>
+        </div>
 
-            <a href="paquetes.html">Paquetes</a>
-        </p>
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>Sobre nosotros</span>
+                Te ofrecemos las mejores experiencias de vida: paseos, excursiones y la mejor gastronomía.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://api.whatsapp.com/send?phone=11111111" target="_blank"><img width="30"
+                        src="./imagenes/whatsapp.svg" alt="logo whatsapp"></a>
+                <a href="https://www.facebook.com" target="_blank"><img width="30" src="./imagenes/facebook.svg"
+                        alt="log"></a>
+                <a href="https://www.instagram.com" target="_blank"><img width="30" src="./imagenes/instagram.svg"
+                        alt="log"></a>
+
+            </div>
+
+        </div>
 
         <p class="footer-company-name">Viajá ya Company © 2023</p>
-    </div>
 
-    <div class="footer-center">
-
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p><span>Vedia 3600</span> CABA, Argentina</p>
-        </div>
-
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+1.555.555.5555</p>
-        </div>
-
-        <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@viajaya.com">support@viajaya.com</a></p>
-        </div>
-
-    </div>
-
-    <div class="footer-right">
-
-        <p class="footer-company-about">
-            <span>Sobre nosotros</span>
-            Te ofrecemos las mejores experiencias de vida: paseos, excursiones y la mejor gastronomía.
-        </p>
-
-        <div class="footer-icons">
-
-            <a href="https://api.whatsapp.com/send?phone=11111111" target="_blank"><img width="30" src="./imagenes/whatsapp.svg" alt="logo whatsapp"></a>
-            <a href="https://www.facebook.com" target="_blank"><img width="30" src="./imagenes/facebook.svg" alt="log"></a>
-            <a href="https://www.instagram.com" target="_blank"><img width="30" src="./imagenes/instagram.svg" alt="log"></a>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
+</body>
 
 </html>
