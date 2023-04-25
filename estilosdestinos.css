@@ -114,7 +114,7 @@ body {
     height: 35px;
 }
 
-@media (max-width:950px) {
+@media (max-width:1051px) {
 
     .header label {
         display: initial;
@@ -122,7 +122,7 @@ body {
     }
 
     .header {
-        padding: 20px 10px;
+        padding:5 px 10px;
     }
 
     .header .navigation {
@@ -141,6 +141,7 @@ body {
 
     .header .navigation ul li a {
         padding: 8px 30px 8px 10%;
+
     }
 
     .header .navigation ul li ul {
@@ -160,16 +161,54 @@ body {
         left: 0;
 
     }
+    
 
     #toggle:checked~.navigation {
         display: block;
     }
+
+    
+    
 }
 
+@media (min-width:600px){
+    #logotitulo{
+        font-size: 35px;
+    }
+    #destinos{
+        font-size: 25px;
+    }
+    #icono{
+        font-size:5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    }
+}
+@media (min-width:200px){
+    #logotitulo{
+        font-size: 35px;
+    }
+    #destinos{
+        font-size: 25px;
+    }
+    #icono{
+        font-size:5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    }
+}
+
+
+
+
+
+
 .images {
-    font-size: 10px;
+    font-size: 5px;
     text-align: center;
-    font-size: 48px;
+    font-size: 50px;
     color: #6a6a6a;
     margin-top: 100px;
 
