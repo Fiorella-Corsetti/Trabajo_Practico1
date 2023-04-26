@@ -198,12 +198,12 @@ section {
     text-align: center;
     font-size: 48px;
     color: #6a6a6a;
-    margin-top: 100px; 
+    margin-top: auto; 
 }
 
 .container_paquetes{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: wrap;
     justify-content: center;
 
@@ -211,7 +211,7 @@ section {
 
 .card_paquete{
     width: 330px;
-    height: 430px;
+    height: 450px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -236,4 +236,8 @@ section {
     font-weight: 1000px;
     font-size: 30px;
     color: #6a6a6a;
+}
+
+.h4{
+    font-size: 10px;
 }
