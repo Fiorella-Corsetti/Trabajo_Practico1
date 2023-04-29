@@ -18,6 +18,7 @@ body{
     font-family: 'Poppins', sans-serif;
     min-height: 10vh;
     box-sizing: border-box;
+    
 
 }
 .header{
@@ -347,26 +348,29 @@ h2::after{
 
 .titulogaleria{
     font-family: 'Instrument Serif', serif;
-    font-weight: 500;
+    font-weight: 450;
     text-align: center;
     padding: 50px 0;
+   color: gray;
     font-size: 70px;
     text-shadow: rgba(64, 206, 222, 0) 1px 0 10px;
 }
+/*
 .linea{
     background: gray;
     height: 5px;
     width: 100%;
     display: block;
-}
+}*/
 
 .galeria{
+     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     width: 95%;
     margin: auto;
     grid-gap: 10px;
-    padding: 40px 0 ;
+    padding: 0 ;
     overflow: hidden;
 }
 
@@ -387,8 +391,8 @@ h2::after{
 }
 
 .galeria a:hover img {
-filter: blur(2px);
-transform: rotate(10deg) scale(1.3);
+/*filter: blur(1px);*/
+transform: rotate(1deg) scale(1.3);
 
 }
 
@@ -447,7 +451,7 @@ transform: scale(0);
 
 /*responsivegaleria*/
 @media screen and (max-width:500px) {
-    .gleria{
+    .galeria{
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     }
 
@@ -463,4 +467,137 @@ transform: scale(0);
     font-size: 20px;
 
     }
+}
+/*videolomejor*/
+.titulovideo{
+    font-family: 'Instrument Serif', serif;
+    color: gray;
+    font-weight: 500;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 70px;
+    text-shadow: rgba(64, 206, 222, 0) 1px 0 10px;
+}
+
+.galeriavideo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0 ;
+    overflow: hidden;
+}
+
+.galeriavideo video{
+    width: 100%;
+    vertical-align:top;
+    height: 300px;
+    object-fit: cover;
+   transition: transform 0.5s;
+}
+
+.galeriavideo > a{
+   display: block;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 0 6px rgba(0,0,0, .5);
+
+}
+
+/*.galeriavideo a:hover video {
+filter: blur(2px);
+transform: rotate(10deg) scale(1.3);
+
+}*/
+
+.light-boxvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index:1000;
+    display: flex;
+justify-content: center;
+align-items: center;
+transform: scale(0);
+
+}
+   
+.light-boxvideo video{
+    width: 75vw;
+    max-height: 70vh ;
+
+}
+
+.light-boxvideo:target{
+    transform: scale(1);
+
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #0099FF;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next{
+    display: block;
+    background: #0099FF;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/*responsivevideo*/
+@media screen and (max-width:500px) {
+    .galeriavideo{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+
+    .close{
+        top:20px;
+        right: 20px;
+
+    }
+    .titulovideo{
+        font-weight: 500px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    
+
+    }}
+
+
+
+
+
+
+
+
+/*metodos pago*/
+.titulopago{
+    font-family: 'Instrument Serif', serif;
+    font-weight: 500;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 70px;
+    text-shadow: rgba(64, 206, 222, 0) 1px 0 10px;
 }
