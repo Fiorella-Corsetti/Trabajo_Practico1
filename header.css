@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;800&family=Poppins:wght@400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 *,
 *::before,
 *::after{
@@ -15,7 +17,7 @@ body{
     height: 100%;
     letter-spacing: 0.03em;
     line-height: 1.6;
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Merriweather', serif;
     min-height: 10vh;
     box-sizing: border-box;
     
@@ -37,12 +39,25 @@ body{
 }
 
 .logo{
-    font-size: 10px;
+    font-size: 20px;
     text-transform: uppercase;
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
+    margin-left: 0px;
 }
 
+.aero{
+    margin-top: 10px;
+    width: 40px;
+}
+
+
+
+
+#icono{
+    width: 80px;
+    margin: 0px
+}
 .navigation ul {
 
     list-style: none;
@@ -57,7 +72,7 @@ body{
 
 .header .navigation ul li a {
 
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
     text-decoration: none;
     padding: 20px;
@@ -118,13 +133,18 @@ background-color:#0099FF;
 }
 
 .titulo {
-    margin: auto;
+    margin:auto;
+    margin-left: 15px;
     padding: auto;
     display: block; 
     color: black;
-    font-size: 50px;
+    font-size: 70px;
     text-align: left;
-    text-shadow: rgb(0, 229, 255) 1px 0 10px;
+    text-shadow: rgb(60, 235, 255) 1px 0 10px;
+}
+
+#tituloimagen{
+
 }
 
 
