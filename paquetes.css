@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;800&family=Poppins:wght@400;600;700;900&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700');
 
 *,
 *::before,
@@ -89,7 +89,7 @@ button a{
     color: #fff;
 }
 
-/* .titulo_hoteles{
+.titulo_hoteles{
     font-size: 5px;
     text-align: center;
     font-size: 50px;
@@ -97,7 +97,7 @@ button a{
     margin-top: 100px;
 }
 
-.card_hoteles{
+/* .card_hoteles{
     width: 330px;
     height: 500px;
     border-radius: 8px;
@@ -106,4 +106,4 @@ button a{
     margin: 5px;
     text-align: center;
     transition: all 0.25;
-} */
+}  */
