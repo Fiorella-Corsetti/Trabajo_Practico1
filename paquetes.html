@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script src="https://kit.fontawesome.com/533a950856.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/533a950856.js" crossorigin="anonymous"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,7 +92,7 @@
 
             <div class="card">
                 <img src="/imagenes_paquetes/tour/7.png" alt="puertoiguazu">
-                <h3 class="h3">Puerto Iguazu</h3>
+                <h3 class="h3">Cataratas del Iguazú</h3>
                 <p>Excursiones y Hospedaje</p>
                 <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
                 </button>
@@ -104,7 +105,19 @@
                 </button>
             </div>
 
-            <h1 class="images" id="destinos">Los mejores Hospedajes </h1>
+        </div> 
+        <div id="hospedaje">
+            <h1 class="titulo_hoteles">Hoteles</h1>
+            <div class="card_hoteles" v-for="elemento in hoteles" >
+                <p>Nombre: {{elemento.label}}</p>   
+                <p>Ubicacion: {{elemento.locationName}}</p>
+       
+                <br>
+           </div>
+    
+        
+        </div>
+        
 
 
 
@@ -177,6 +190,11 @@
         <p class="footer-company-name">Viajá ya Company © 2023</p>
 
     </footer>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./hospedaje.js"></script>
 </body>
 
 </html>
