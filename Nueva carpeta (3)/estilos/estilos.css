@@ -33,7 +33,7 @@ body{
 
 .hero{
     height: 100vh;
-    background-image: var(--background), url('file:///C:/Users/54385/Desktop/Nueva%20carpeta%20(3)/imagenes/portada.jpg');
+    background-image: var(--background), url(./portada.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
