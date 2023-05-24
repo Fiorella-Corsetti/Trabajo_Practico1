@@ -1,0 +1,52 @@
+.container_mapas{
+  
+
+    display: flex;
+flex-direction: row;
+}
+
+
+.titulo_sucursales{
+   
+
+margin-top: 150px;
+   
+    font-size: 65px;
+    text-align: center;
+    
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.mapa{
+    
+    width: 500px;
+    border-radius: 40px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    
+    transition: all 0.25;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+#titulomapa{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    background-color: #0891ed72;
+    font-weight:600;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+@media screen and (min-witdh:300px){
+    .main-container{
+        display: flex;
+       flex-direction: column;
+       flex-grow: 1;
+    }
+}

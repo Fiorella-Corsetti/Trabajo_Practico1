@@ -1,0 +1,64 @@
+
+    
+
+form{
+    
+    margin: 0;
+    
+    width: 500px;
+    margin: auto;
+    /*background: rgba(0,0,0,0.4);*/
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 50px 30px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    
+    
+}
+ 
+h2{
+    color:white;
+    text-align: center;
+    margin:0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+  font-size: 17px;
+  border: none;
+}
+
+textarea{
+min-height: 100px;
+max-height: 200px;
+max-width: 100%;
+
+}
+
+#boton{
+    background:white;
+    transition: all 0.3s;/*transition*/
+    padding: 20px;
+
+}
+#boton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*RESPONSIVE*/
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
