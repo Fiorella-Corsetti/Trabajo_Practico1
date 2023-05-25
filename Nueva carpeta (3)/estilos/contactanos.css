@@ -45,13 +45,15 @@ max-width: 100%;
 
 }
 
-#boton{
+button{
+   width:440px ;
+   border: 0cm;
     background:white;
     transition: all 0.3s;/*transition*/
     padding: 20px;
 
 }
-#boton:hover{
+button:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
