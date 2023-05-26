@@ -3,9 +3,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-       
-        hoteles:[],
-        url:"http://engine.hotellook.com/api/v2/lookup.json?query=argentina",   
+        url:"http://engine.hotellook.com/api/v2/lookup.json?query=argentina",
+        hoteles:[]    
      }
     },
     methods: {
