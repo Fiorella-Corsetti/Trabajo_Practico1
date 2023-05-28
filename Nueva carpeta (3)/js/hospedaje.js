@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         url:"http://engine.hotellook.com/api/v2/lookup.json?query=argentina",
+       
         hoteles:[]    
      }
     },
