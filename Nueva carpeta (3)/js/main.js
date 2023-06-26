@@ -22,7 +22,7 @@ let cad=`
     <div class="hero__wave" style=" overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.00,50.03 C150.00,150.13 349.20,-50.03 500.00,50.03 L500.00,150.13 L-0.00,150.13 Z" style="stroke: none; fill: #fff;"></path></svg></div>
 
 `
-document.getElementById("header").innerHTML=cad;
+document.querySelector("header").innerHTML=cad;
 
 let cadfooter=`
 <div class="footer-left">
@@ -94,4 +94,32 @@ let cadfooter=`
 
 
 `
-document.getElementById("footer").innerHTML=cadfooter;
+document.querySelector("footer").innerHTML=cadfooter;
+
+//api
+const { createApp } = Vue
+
+createApp({
+  data() {
+    return {
+      message: 'Hello Vue!',
+      paquetes:[],
+      url:"https://linamendieta.pythonanywhere.com/paquetes",
+    }
+  },
+  methods:{
+      fetchData(url){
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          this.paquetes=data
+        })
+        .catch(error=>alert("ups" + error))
+      },
+  },
+
+  created(){
+    this.fetchData(this.url)
+  }
+}).mount('#app')

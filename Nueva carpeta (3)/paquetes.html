@@ -1,106 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/estilos.css">
-    <link rel="stylesheet" href="./estilos/footer.css">
-    <link rel="stylesheet" href="./estilos/destinos.css">
-  
-    <link rel="icon" href="./imagenes/aeropuerto.ico">
-    <title>Viaja ya</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilos/estilos.css">
+  <link rel="stylesheet" href="./estilos/footer.css">
+  <link rel="stylesheet" href="./estilos/destinos.css">
+  <link rel="stylesheet" href="./estilos/paquetes.css">
+
+  <link rel="icon" href="./imagenes/aeropuerto.ico">
+  <title>Viaja ya</title>
 </head>
 
 <body>
   <!--encabezadoybarradenavegacion-->
   <header class="hero" id="header">
-    
+
 
   </header>
 
 
   <!--contenido principal-->
   <main class="main-container">
-    <!--secciongalerias-->
-    <h2 class="subtitle">Nuestros Paquetes</h2>
-    <div class="containercard">
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/1.jpg" alt="buenos aires">
-        <h3 class="h3">Buenos Aires</h3>
-        <p>Tours y Hospedaje </p>
-        <button> <a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
+    <div id="app">
 
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/2.jpg" alt="El calafate">
-        <h3 class="h3">El Calafate</h3>
-        <p>Excursiones</p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank"> Contactanos</a>
-        </button>
-      </div>
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/3.jpg" alt="Mendoza">
-        <h3 class="h3">Mendoza</h3>
-        <p>Excursiones </p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/4.jpg" alt="salta">
-        <h3 class="h3">Salta</h3>
-        <p>Excursiones </p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/5.png" alt="bariloche">
-        <h3 class="h3">Bariloche</h3>
-        <p>Excursiones</p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
+      <h2 class="subtitle">Nuestros paquetes</h2>
+      <div class="containercard">
+        <div class="card" v-for="paquete in paquetes">
 
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/6.png" alt="jujuy">
-        <h3 class="h3">Jujuy</h3>
-        <p>Excursiones </p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
-
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/7.png" alt="puertoiguazu">
-        <h3 class="h3">Cataratas del Iguazú</h3>
-        <p>Excursiones y Hospedaje</p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
-      <div class="card">
-        <img src="./imagenes/imagenes_paquetes/tour/8.png" alt="santafe">
-        <h3 class="h3">Santa Fe</h3>
-        <p>Excursiones </p>
-        <button><a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-        </button>
-      </div>
-
-    </div>
-
-    <h1 class="titulo_hoteles">Nuestros mejores Hospedajes para vos!</h1><br>
-
-    <div id="hoteles">
-      <div class="d-flex flex-wrap justify-content-around">
-        <div v-for="elemento in hoteles" class="card_hoteles" style="width: 300px;">
-          <div class="card_body">
-            <h4 class="card_title">{{elemento.label}}</h4>
-            <p class="card_text">Ubicacion: {{elemento.locationName}}</p>
-            <button> <a href="paquetes.html" target="_blank">Reservar hotel</a> </button>
-          </div>
-
+          <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
+          <p>Paquete: {{paquete.nombre}}</p>
+          <p>Precio: {{paquete.precio}}</p>
+          <p>Stock: {{paquete.stock}}</p>
+          <button> <a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
+          </button>
+          <br>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,12 +64,15 @@
 
   <footer class="footer-distributed" id="footer">
 
-    
+
   </footer>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
 
-<script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
+
+
 </body>
+
 </html>
