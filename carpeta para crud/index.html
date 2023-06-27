@@ -16,7 +16,7 @@
     <main>
         <div id="app">
             <h2 class="t2">Administración de paquetes</h2>
-            <button><a href="#">Nuevo Producto</a> </button>
+            <button><a href="producto_nuevo.html" target="_blank">Nuevo Producto</a> </button>
             <div class="containercard">
                 <div class="card" id="paque" v-for="paquete in paquetes">
 
@@ -25,7 +25,7 @@
                     <p>Precio: {{paquete.precio}}</p>
                     <p>Stock: {{paquete.stock}}</p>
                     <button> <a href="#">Modificar</a></button>
-                    <button> <a href="#">Eliminar</a></button>
+                    <button class="bt" v-on:click="eliminar(paquete.id)">Eliminar</a></button>
                   
                 </div>
             </div>
@@ -41,7 +41,7 @@
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

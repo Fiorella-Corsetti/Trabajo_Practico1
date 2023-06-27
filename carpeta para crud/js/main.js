@@ -7,7 +7,7 @@ let cad=`
         <h2 class="hero__subtitle">
           Comienza hoy una nueva Aventura
         </h2>
-        <a  href="#paque" class="hero__cta" target="_blank">Modificar Paquetes</a>
+        <a  href="index.html" class="hero__cta" target="_blank">Modificar Paquetes</a>
         </div>
 
       </section>
@@ -34,11 +34,28 @@ createApp({
         fetch(url)
         .then(response => response.json())
         .then(data => {
-          console.log(data)
-          this.paquetes=data
+          
+          this.paquetes=data;
+          this.cargando=false
         })
-        .catch(error=>alert("ups" + error))
+        .catch(err => {
+            console.error(err);
+            this.error=true
+        })
       },
+      //para el metodo eliminar
+      eliminar(paquete){
+        const url ='https://linamendieta.pythonanywhere.com/paquetes/' + paquete;
+        var options = {
+            method : 'DELETE',
+
+        }
+        fetch(url,options)
+             .then(res => res.text())
+             .then(res =>{
+                location.reload();
+             })
+       }
   },
 
   created(){
