@@ -25,15 +25,15 @@
             <form action="">
                 <h2 class="titulo_contacto">Alta de Producto</h2>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre"> <br>
+                <input v-model="nombre" type="text" name="nombre" id="nombre"> <br>
                 <br>
                 <label for="precio">Precio</label>
-                <input type="number" name="precio" id="precio" />
+                <input v-model="precio" type="number" name="precio" id="precio" />
                 <br>
                 <label for="stock">Stock</label>
-                <input type="number" name="stock" id="stock">
+                <input v-model="stock" type="number" name="stock" id="stock">
                 <label for="imagen">Imagen</label>
-                <input type="text" name="imagen" id="imagen">
+                <input v-model="imagen" type="text" name="imagen" id="imagen">
                 <br>
                 <!--<input type="submit" value="Enviar">-->
                 <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
@@ -58,7 +58,7 @@
                     <div class="card" id="paque" v-for="paquete in paquetes">
                         <div>
                             <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
-                            <p>Id: {{paquete.id}}</p>
+                           
                             <p>Paquete: {{paquete.nombre}}</p>
                             <p>Precio: {{paquete.precio}}</p>
                             <p>Stock: {{paquete.stock}}</p>
