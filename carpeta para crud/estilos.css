@@ -312,3 +312,10 @@ textarea {
         width: 100%;
     }
 }
+/*para ocultar formularioalta*/
+#form{
+    display: none;
+}
+button{
+    color: white;
+}

@@ -18,47 +18,11 @@ let cad=`
 `
 document.querySelector("header").innerHTML=cad;
 
-//api
-const { createApp } = Vue
+//funcionpara mostrar y ocultar formulario de alta
+function mostrar(){
+  document.getElementById('form').style.display = 'block';
+}
 
-createApp({
-  data() {
-    return {
-      message: 'Hello Vue!',
-      paquetes:[],
-      url:"https://linamendieta.pythonanywhere.com/paquetes",
-    }
-  },
-  methods:{
-      fetchData(url){
-        fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          
-          this.paquetes=data;
-          this.cargando=false
-        })
-        .catch(err => {
-            console.error(err);
-            this.error=true
-        })
-      },
-      //para el metodo eliminar
-      eliminar(paquete){
-        const url ='https://linamendieta.pythonanywhere.com/paquetes/' + paquete;
-        var options = {
-            method : 'DELETE',
-
-        }
-        fetch(url,options)
-             .then(res => res.text())
-             .then(res =>{
-                location.reload();
-             })
-       }
-  },
-
-  created(){
-    this.fetchData(this.url)
-  }
-}).mount('#app')
+function ocultar(){
+  document.getElementById('form').style.display = 'none';
+}

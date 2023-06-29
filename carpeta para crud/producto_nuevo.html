@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="./">
+   
+    <link rel="icon" href="aeropuerto.ico">
     <title>Viaja ya</title>
 </head>
 
@@ -29,15 +30,16 @@
             <input type="text" name="imagen" id="imagen">
             <br>
             <!--<input type="submit" value="Enviar">-->
-            <button class="btp" v-on:click="guardar()">Grabar</button>
+            <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+
 
         </form>
     </main>
 
 
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/producto_nuevo.js"></script>
+   
 </body>
 
 </html>

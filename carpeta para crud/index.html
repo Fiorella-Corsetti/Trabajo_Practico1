@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Viaja ya</title>
+
+    <link rel="icon" href="aeropuerto.ico">
 </head>
 
 <body>
@@ -14,34 +15,117 @@
 
     </header>
     <main>
+        <h2 class="t2">Administración de paquetes</h2>
+       
+       
         <div id="app">
-            <h2 class="t2">Administración de paquetes</h2>
-            <button><a href="producto_nuevo.html" target="_blank">Nuevo Producto</a> </button>
-            <div class="containercard">
-                <div class="card" id="paque" v-for="paquete in paquetes">
+        <button id="boton" onclick="mostrar();">Nuevo Producto</button>
 
-                    <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
-                    <p>Paquete: {{paquete.nombre}}</p>
-                    <p>Precio: {{paquete.precio}}</p>
-                    <p>Stock: {{paquete.stock}}</p>
-                    <button> <a href="#">Modificar</a></button>
-                    <button class="bt" v-on:click="eliminar(paquete.id)">Eliminar</a></button>
-                  
-                </div>
-            </div>
+        <div id="form">
+            <form action="">
+                <h2 class="titulo_contacto">Alta de Producto</h2>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre"> <br>
+                <br>
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" id="precio" />
+                <br>
+                <label for="stock">Stock</label>
+                <input type="number" name="stock" id="stock">
+                <label for="imagen">Imagen</label>
+                <input type="text" name="imagen" id="imagen">
+                <br>
+                <!--<input type="submit" value="Enviar">-->
+                <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
 
 
-
-
+            </form>
+            <button id="boton" onclick="ocultar();">volver atras</button>
         </div>
+
+
+        <!--para trabajar con la api-->
+       <div v-if="error">
+        <p>Lo Sentimos , .....</p>
+       </div>
+       <div v-else>
+            <section v-if="cargando">
+                <div class="spinner-border"></div>
+                 <p>Cargando ....</p>
+            </section>
+            <section v-else>
+                <div class="containercard">
+                    <div class="card" id="paque" v-for="paquete in paquetes">
+                        <div>
+                            <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
+                            <p>Id: {{paquete.id}}</p>
+                            <p>Paquete: {{paquete.nombre}}</p>
+                            <p>Precio: {{paquete.precio}}</p>
+                            <p>Stock: {{paquete.stock}}</p>
+                            <button type="button"  v-on:click="eliminar(paquete.id)" >Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+       </div>
+          
+        </div><!--div cierra #app-->
+
+
+
+
+
+
+        <!--<div id="">
+
+            <div v-if="error">
+                <p>lo sentimos ,.....</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>cargando...</p>
+                </section>
+
+            </div>
+            <section v-else>
+                <div class="containercard">
+                    <div class="card" id="paque" v-for="paquete in paquetes">
+
+                        <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
+                        <p>Paquete: {{paquete.nombre}}</p>
+                        <p>Precio: {{paquete.precio}}</p>
+                        <p>Stock: {{paquete.stock}}</p>
+
+                        <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id">Editar</a>
+                        <button type="button" class="btn btn-danger"
+                            v-on:click="eliminar(producto.id)">Eliminar</button>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>-->
+
+
+
+
+
+
 
     </main>
 
 
 
 
+
+   
+   
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/paquetes.js"></script>
+    <script src="//code.tidio.co/gxiqpj5esvsy75zyrsmyhb1drkf0bbk7.js"></script>
 </body>
 
 </html>
