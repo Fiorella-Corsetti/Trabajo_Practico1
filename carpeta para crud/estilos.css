@@ -319,3 +319,7 @@ textarea {
 button{
     color: white;
 }
+
+#form2{
+    display: none;
+}

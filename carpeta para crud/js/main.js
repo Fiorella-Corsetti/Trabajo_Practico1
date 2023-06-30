@@ -26,3 +26,12 @@ function mostrar(){
 function ocultar(){
   document.getElementById('form').style.display = 'none';
 }
+
+//funcion mostrar y ocultar el modificar
+function mostrarm(){
+  document.getElementById('form2').style.display = 'block';
+}
+
+function ocultarm(){
+  document.getElementById('form2').style.display = 'none';
+}
