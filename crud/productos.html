@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Viaja ya</title>
+    <link rel="icon" href="./imagenes/aeropuerto.ico">
+</head>
+
+<body>
+    <header class="hero" id="header">
+
+    </header>
+    <main>
+        <h2 class="t2">Administración de paquetes</h2>
+        <div id="app">
+           <button><a class="btn btn-primary" href="producto_nuevo.html" target="_blank">Nuevo</a></button> 
+        <!--para trabajar con la api-->
+        <div v-if="error">
+            <p>Lo Sentimos , .....</p>
+        </div>
+        <div v-else>
+            <section v-if="cargando">
+                <div class="spinner-border"></div>
+                <p>Cargando ....</p>
+            </section>
+            <section v-else>
+                <div class="containercard">
+                    <div class="card" id="paque" v-for="producto in productos">
+                        <div>
+                            <img width="200" :src="producto.imagen" :alt="producto.nombre">
+                            <p>Id:{{producto.id}}</p>
+                            <p>Paquete: {{producto.nombre}}</p>
+                            <p>Precio: {{producto.precio}}</p>
+                            <p>Stock: {{producto.stock}}</p>
+                            <button><a :href="'producto_update.html?id='+ producto.id" >Editar</a></button>
+                            <button  v-on:click="eliminar(producto.id)" >Eliminar</button>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div> <!--cierra app-->
+    </main>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/productos.js"></script>
+</body>
+</html>

@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-   
-    <link rel="icon" href="aeropuerto.ico">
     <title>Viaja ya</title>
+    <link rel="icon" href="./imagenes/aeropuerto.ico">
 </head>
 
 <body>
@@ -16,30 +15,36 @@
 
     </header>
     <main>
+<div id="app">
+    <div >
         <form action="">
             <h2 class="titulo_contacto">Alta de Producto</h2>
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre"> <br>
+            <input v-model="nombre" type="text" name="nombre" id="nombre"> <br>
             <br>
             <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio" />
+            <input v-model="precio" type="number" name="precio" id="precio" />
             <br>
             <label for="stock">Stock</label>
-            <input type="number" name="stock" id="stock">
+            <input v-model="stock" type="number" name="stock" id="stock">
             <label for="imagen">Imagen</label>
-            <input type="text" name="imagen" id="imagen">
+            <input v-model="imagen" type="text" name="imagen" id="imagen">
             <br>
             <!--<input type="submit" value="Enviar">-->
             <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
 
 
         </form>
+</div>
+
     </main>
+    <footer>
+
+    </footer>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
-   
+    <script src="./js/productos.js"></script>
 </body>
-
 </html>

@@ -17,21 +17,3 @@ let cad=`
 
 `
 document.querySelector("header").innerHTML=cad;
-
-//funcionpara mostrar y ocultar formulario de alta
-function mostrar(){
-  document.getElementById('form').style.display = 'block';
-}
-
-function ocultar(){
-  document.getElementById('form').style.display = 'none';
-}
-
-//funcion mostrar y ocultar el modificar
-function mostrarm(){
-  document.getElementById('form2').style.display = 'block';
-}
-
-function ocultarm(){
-  document.getElementById('form2').style.display = 'none';
-}
