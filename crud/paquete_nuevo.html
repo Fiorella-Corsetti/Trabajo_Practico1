@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Viaja ya</title>
+    <link rel="icon" href="./imagenes/aeropuerto.ico">
+</head>
+
+<body>
+    <header class="hero" id="header">
+
+    </header>
+    <main>
+        
+        <div id="app">
+            <div>
+                <form action="">
+                    <h2 class="titulo_contacto">Alta de Paquete</h2>
+                    <label for="nombre">Nombre</label>
+                    <input v-model="nombre" type="text" name="nombre" id="nombre"> <br>
+                    <br>
+                    <label for="precio">Precio</label>
+                    <input v-model="precio" type="number" name="precio" id="precio" />
+                    <br>
+                    <label for="stock">Stock</label>
+                    <input v-model="stock" type="number" name="stock" id="stock">
+                    <label for="imagen">Imagen</label>
+                    <textarea placeholder="Ingrese la dirección de imágen (link)" name="comentario" id="comentario" cols="20" rows="2"></textarea>
+                    <!-- <input v-model="imagen" type="text" name="imagen" id="imagen"> -->
+                    
+                    <br>
+                    <!--<input type="submit" value="Enviar">-->
+                    <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+
+
+                </form>
+            </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/paquetes.js"></script>
+</body>
+
+</html>

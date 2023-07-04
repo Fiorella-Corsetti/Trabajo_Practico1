@@ -25,23 +25,10 @@
   <!--contenido principal-->
   <main class="main-container">
     <div id="app">
-      <div class="modificar_paquetes">
-        <button> <a href="modificar_paquetes.html">Modificá el paquete que quieras!</a> </button>
+      <div class="atras">
+        <button> <a href="paquetes.html">Volver atrás</a> </button>
       </div>
-      <h2 class="subtitle">Nuestros paquetes</h2>
-      <div class="containercard">
-        <div class="card" v-for="paquete in paquetes">
-
-          <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
-          <p>Paquete: {{paquete.nombre}}</p>
-          <p>Precio: {{paquete.precio}}</p>
-          <p>Stock: {{paquete.stock}}</p>
-          <button> <a href="https://api.whatsapp.com/send?phone=3854021704" target="_blank">Contactanos</a>
-          </button>
-          <br>
-        </div>
-      </div>
-    </div>
+      
 
 
 

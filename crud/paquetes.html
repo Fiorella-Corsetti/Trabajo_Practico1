@@ -15,9 +15,11 @@
 
     </header>
     <main>
+
+
         <h2 class="t2">Administración de paquetes</h2>
         <div id="app">
-           <button><a class="btn btn-primary" href="producto_nuevo.html" target="_blank">Nuevo</a></button> 
+           <button><a class="btn btn-primary" href="paquete_nuevo.html" target="_blank">Nuevo</a></button> 
         <!--para trabajar con la api-->
         <div v-if="error">
             <p>Lo Sentimos , .....</p>
@@ -29,15 +31,15 @@
             </section>
             <section v-else>
                 <div class="containercard">
-                    <div class="card" id="paque" v-for="producto in productos">
+                    <div class="card" id="paque" v-for="paquete in paquetes">
                         <div>
-                            <img width="200" :src="producto.imagen" :alt="producto.nombre">
-                            <p>Id:{{producto.id}}</p>
-                            <p>Paquete: {{producto.nombre}}</p>
-                            <p>Precio: {{producto.precio}}</p>
-                            <p>Stock: {{producto.stock}}</p>
-                            <button><a :href="'producto_update.html?id='+ producto.id" >Editar</a></button>
-                            <button  v-on:click="eliminar(producto.id)" >Eliminar</button>
+                            <img width="200" :src="paquete.imagen" :alt="paquete.nombre">
+                            <p>Id:{{paquete.id}}</p>
+                            <p>Nombre: {{paquete.nombre}}</p>
+                            <p>Precio: {{paquete.precio}}</p>
+                            <p>Stock: {{paquete.stock}}</p>
+                            <button><a :href="'paquete_update.html?id='+ paquete.id" >Editar</a></button>
+                            <button  v-on:click="eliminar(paquete.id)" >Eliminar</button>
 
 
 
@@ -52,6 +54,6 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/productos.js"></script>
+    <script src="./js/paquetes.js"></script>
 </body>
 </html>
