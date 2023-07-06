@@ -7,7 +7,7 @@ let cad=`
         <h2 class="hero__subtitle">
           Comienza hoy una nueva Aventura
         </h2>
-        <a  href="index.html" class="hero__cta" target="_blank">Modificar Paquetes</a>
+        <a  href="index.html" class="hero__cta">Modificar Paquetes</a>
         </div>
 
       </section>
