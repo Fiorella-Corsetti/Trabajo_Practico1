@@ -94,3 +94,4 @@ let cadfooter = `
 <p class="footer-company-name">Viajá ya Company © 2023</p>
 
 `
+document.querySelector("footer").innerHTML = cadfooter;
