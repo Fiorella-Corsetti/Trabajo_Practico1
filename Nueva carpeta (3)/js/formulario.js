@@ -13,22 +13,22 @@ function validar() {
 
 
 
-// if (nombre.length === 0) {
-//   alert("Nombre Obligatorio")
-//   logica = false
-// }
+  // if (nombre.length === 0) {
+  //   alert("Nombre Obligatorio")
+  //   logica = false
+  // }
 
-// if (email.length === 0) {
-//   alert("Email Obligatorio")
-//   logica = false
-// }
-
-
+  // if (email.length === 0) {
+  //   alert("Email Obligatorio")
+  //   logica = false
+  // }
 
 
-if (logica) {
-  grabar()
-}
+
+
+  if (logica) {
+    grabar()
+  }
 }
 
 function grabar() {

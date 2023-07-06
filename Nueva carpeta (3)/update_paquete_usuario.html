@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./estilos/footer.css">
     <link rel="stylesheet" href="./estilos/destinos.css">
     <link rel="stylesheet" href="./estilos/paquetes.css">
+    <link rel="stylesheet" href="./estilos/paquetes2.css">
 
     <link rel="icon" href="./imagenes/aeropuerto.ico">
     <title>Viaja ya</title>
@@ -31,8 +32,8 @@
             <div class="atras">
                 <button> <a href="modificar_paquetes.html">Volver atrás</a> </button>
             </div>
-            <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-                <h1>Modificá un paquete</h1>
+            <form class="agregar_paquete" style="background-color: rgb(221, 173, 239);margin:10px auto ; width: 400px; padding: 20px;">
+                <h1 class="titulos_modificar">Modificá un paquete</h1>
                 <p>Precio:{{precio}}</p>
                 <div class="mb-3">
                     <label for="id">Id</label>
@@ -58,7 +59,7 @@
                     <img width="100" :src="imagen" alt="">
                 </div>
 
-                <button type="button" class="btn btn-success" v-on:click="modificar()">Guardar paquete</button>
+                <button type="button" class="boton_chiquito" v-on:click="modificar()">Guardar paquete</button>
             </form>
         </div>
     </main>

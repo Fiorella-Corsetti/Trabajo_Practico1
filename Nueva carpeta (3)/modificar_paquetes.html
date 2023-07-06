@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./estilos/footer.css">
   <link rel="stylesheet" href="./estilos/destinos.css">
   <link rel="stylesheet" href="./estilos/paquetes.css">
+  <link rel="stylesheet" href="./estilos/paquetes2.css">
 
   <link rel="icon" href="./imagenes/aeropuerto.ico">
   <title>Viaja ya</title>
@@ -32,9 +33,9 @@
         <button> <a href="paquetes.html">Volver atrás</a> </button>
       </div>
 
-      <h1>Planificá tu viaje! Nosotros nos encargamos del resto</h1>
+      <h1 class="titulos_modificar">Planificá tu viaje! Nosotros nos encargamos del resto</h1>
       <br>
-      <a class="btn btn-primary" href="nuevo_paquete_usuario.html">Nuevo paquete</a>
+      <button class="atras" ><a  href="nuevo_paquete_usuario.html">Nuevo paquete</a></button>
       <br><br>
       <div v-if="error">
         <p>Lo sentimos , ........</p>
@@ -48,12 +49,17 @@
           <div class="table-responsive">
             <table class="table table-bordered">
               <thead>
-                <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Stock</th>
-                </tr>
+                <div class="tabla">
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Que quieres hacer? Elige una opcion</th>
+                  </tr>
+                </div>
+                
               </thead>
               <tbody>
                 <tr class="" v-for="paquete in paquetes">
@@ -65,8 +71,8 @@
                     <img width="60" :src="paquete.imagen" :alt="paquete.nombre">
                   </td>
                   <td>
-                    <a class="btn btn-primary" :href="'update_paquete_usuario.html?id='+ paquete.id">Editar</a>
-                    <button type="button" class="btn btn-danger" v-on:click="eliminar(paquete.id)">Eliminar</button>
+                    <button type="button " class="boton_chiquito"><a  :href="'update_paquete_usuario.html?id='+ paquete.id">Editar</a></button>
+                    <button type="button" class="boton_chiquito"  v-on:click="eliminar(paquete.id)">Eliminar</button>
                   </td>
                 </tr>
               </tbody>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./estilos/footer.css">
     <link rel="stylesheet" href="./estilos/destinos.css">
     <link rel="stylesheet" href="./estilos/paquetes.css">
+    <link rel="stylesheet" href="./estilos/paquetes2.css">
 
     <link rel="icon" href="./imagenes/aeropuerto.ico">
     <title>Viaja ya</title>
@@ -31,8 +32,8 @@
             <div class="atras">
                 <button> <a href="modificar_paquetes.html">Volver atrás</a> </button>
             </div>
-            <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-                <h1>Ingresá un nuevo paquete</h1>
+            <form class="agregar_paquete" style="background-color: rgb(221, 173, 239);margin:10px auto ; width: 400px; padding: 20px;">
+                <h1 class="titulos_modificar">Ingresá un nuevo paquete</h1>
                 <div class="mb-3">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" v-model="nombre">
@@ -49,11 +50,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="imagen">Imagen</label>
-                    <input type="text" name="imagen" id="imagen" v-model="imagen">
+                    <!-- <input type="text" name="imagen" id="imagen" v-model="imagen"> -->
+                    <textarea placeholder="Ingrese la dirección de imágen (link)" name="comentario" id="comentario" cols="20" rows="2"></textarea>
                     <img width="100" :src="imagen" alt="">
                 </div>
 
-                <button type="button" class="btn btn-success" v-on:click="grabar()">Guardar paquete</button>
+                <button type="button" class="boton_chiquito" v-on:click="grabar()">Guardar paquete</button>
             </form>
         </div>
     </main>
