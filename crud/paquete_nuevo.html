@@ -15,7 +15,7 @@
 
     </header>
     <main>
-        
+
         <div id="app">
             <div>
                 <form action="">
@@ -29,9 +29,12 @@
                     <label for="stock">Stock</label>
                     <input v-model="stock" type="number" name="stock" id="stock">
                     <label for="imagen">Imagen</label>
+                    <input v-model="imagen" type="text" name="imagen" id="imagen">
+                    <br>
+                    <!--<label for="imagen">Imagen</label>
                     <textarea placeholder="Ingrese la dirección de imágen (link)" name="comentario" id="comentario" cols="20" rows="2"></textarea>
-                    <!-- <input v-model="imagen" type="text" name="imagen" id="imagen"> -->
-                    
+                     <input v-model="imagen" type="text" name="imagen" id="imagen"> -->
+
                     <br>
                     <!--<input type="submit" value="Enviar">-->
                     <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>

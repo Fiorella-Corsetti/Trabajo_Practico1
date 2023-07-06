@@ -46,7 +46,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./paquetes.html"; // navega a paquetes.html
+                    window.location.href = "./index.html"; // navega a paquetes.html
                 })
                 .catch(err => {
                     console.error(err);
